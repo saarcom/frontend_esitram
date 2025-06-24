@@ -1,0 +1,35 @@
+.contenedor {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.titulo {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.info {
+  font-size: 1.1rem;
+  margin: 5px 0;
+  color: #555;
+}
+
+@media (max-width: 600px) {
+  .contenedor {
+    padding: 15px;
+  }
+
+  .titulo {
+    font-size: 1.5rem;
+  }
+
+  .info {
+    font-size: 1rem;
+  }
+}
