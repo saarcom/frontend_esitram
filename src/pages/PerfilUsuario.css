@@ -1,0 +1,47 @@
+/* src/pages/PerfilUsuario.css */
+
+.perfil-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.perfil-content {
+  flex: 1;
+  padding: 2rem;
+}
+
+.perfil-info {
+  margin-bottom: 2rem;
+}
+
+.perfil-info h2 span {
+  color: #007bff;
+}
+
+.perfil-actions button {
+  margin-right: 1rem;
+  padding: 0.75rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.perfil-actions button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 568px) {
+  .perfil-layout {
+    flex-direction: column;
+  }
+
+  .perfil-content {
+    padding: 1rem;
+  }
+}

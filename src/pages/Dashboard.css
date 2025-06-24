@@ -1,0 +1,12 @@
+/* src/pages/Dashboard.css */
+
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 2rem;
+  background-color: #f4f4f4;
+}
