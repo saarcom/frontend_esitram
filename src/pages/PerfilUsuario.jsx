@@ -44,7 +44,7 @@ function PerfilUsuario() {
 
         <section className="perfil-actions">
           <button onClick={() => navigate(`/actualizar-datos/${user.id}`)}>
-            Ir a actualización de datos
+            Actualizar datos
           </button>
 
           <button
