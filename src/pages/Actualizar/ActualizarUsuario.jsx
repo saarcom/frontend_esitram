@@ -42,6 +42,10 @@ function ActualizarUsuario() {
         <input name="password" type="password" onChange={handleChange} placeholder="Nueva contraseña" />
         <input name="role" value={user.role} onChange={handleChange} required />
         <button type="submit">Guardar Cambios</button>
+{/* Botón para volver atrás */}
+        <button type="button" onClick={() => navigate(-1)}>
+        Volver Atrás
+        </button>
         
       </form>
 
