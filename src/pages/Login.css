@@ -1,7 +1,7 @@
 
 
 body {
-  background: linear-gradient(-45deg, #e3f2fd, #cfe9ff, #bbdefb, #e1f5fe);
+
   background-size: 400% 400%;
   animation: gradient 10s ease infinite;
 }
@@ -221,7 +221,7 @@ body {
   right: 10px;
   background: none;
   border: none;
-  color: #4299e1;
+  color: #e1426a;
   font-weight: 600;
   cursor: pointer;
   padding: 0.3rem;

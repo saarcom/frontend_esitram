@@ -1,46 +1,62 @@
+// MenuPost.jsx
 import { useNavigate } from 'react-router-dom';
-import { useState, useEffect, useRef } from 'react';
 import './Menupost.css';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars } from 'react-icons/fa';
+import avatar from '../../images/avatar.png'; // Asegúrate de que la ruta sea correcta
 
-function MenuPost() {
+function MenuPost({ isOpen, toggleMenu }) {
   const navigate = useNavigate();
-  const [open, setOpen] = useState(false);
   const user = JSON.parse(localStorage.getItem('user'));
-  const menuRef = useRef(null); // <- Aquí está bien
-
-  const handleLogout = () => {
-    localStorage.removeItem('user');
-    navigate('/');
-  };
-
-  // Cierra el menú si se hace clic fuera
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (open && menuRef.current && !menuRef.current.contains(event.target)) {
-        setOpen(false);
-      }
-    }
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [open]);
 
   return (
     <>
-      <button className="menu-toggle" onClick={() => setOpen(!open)}>
-        {open ? <FaTimes /> : <FaBars />}
+      <button className="menu-toggle" onClick={toggleMenu}>
+        {isOpen ? <FaBars /> : <FaBars />}
       </button>
 
-      <aside ref={menuRef} className={`menu-post ${open ? 'open' : ''}`}>
+      <aside className={`menu-post ${isOpen ? '' : 'closed'}`}>
         <div className="menu-content">
-          <div className="menu-user">👤 {user?.name}</div>
+          <div className="menu-user">
+           
+            <img
+              src={avatar} // cambia esto al path real de tu imagen
+              alt="Usuario"
+              className="user-avatar"
+            />
+              <h2>{user?.name}</h2>
+              <h5>{user?.email}</h5>
+          </div>
+
+          {/* Botones visibles para todos */}
           <button onClick={() => navigate(`/usuarios/${user.id}`)}>Perfil</button>
           <button onClick={() => navigate(`/usuarios/${user.id}/actualizar`)}>Actualizar</button>
           <button onClick={() => navigate('/bienvenida')}>Inicio</button>
-          <button onClick={handleLogout}>Cerrar sesión</button>
+
+          {/* Solo para ADMIN */}
+          {user?.role === 'admin' && (
+            <>
+              <button onClick={() => navigate(`/PerfilAdmin/${user.id}`)}>Admin Panel</button>
+              <button onClick={() => navigate('/usuarios')}>Gestión de Usuarios</button>
+            </>
+          )}
+
+          {/* Solo para USER */}
+          {user?.role === 'user' && (
+            <>
+              <button onClick={() => navigate('/mis-datos')}>Mis Datos</button>
+              <button onClick={() => navigate('/ayuda')}>Ayuda</button>
+            </>
+          )}
+
+          {/* Cerrar sesión */}
+          <button
+            onClick={() => {
+              localStorage.removeItem('user');
+              navigate('/login');
+            }}
+          >
+            Cerrar sesión
+          </button>
         </div>
       </aside>
     </>

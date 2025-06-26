@@ -1,8 +1,10 @@
 .admin-panel {
+  flex: 1;
   padding: 2rem;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f0f4f8;
-  min-height: 100vh;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin: 2rem;
 }
 
 .admin-header {
