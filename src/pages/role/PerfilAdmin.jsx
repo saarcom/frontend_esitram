@@ -4,6 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import Modal from 'react-modal';
 import './PerfilAdmin.css'; // Asegúrate de tener un archivo CSS para estilos
 import MenuPost from '../../components/menu/MenuPost';
+import Header  from '../../components/Header';
 
 
 Modal.setAppElement('#root'); // necesario para accesibilidad
@@ -59,7 +60,10 @@ function PerfilAdmin() {
   };
 
   return (
+    <>
+    <Header isOpen={isOpen} /> {/* Agregado aquí */}
 
+    
     <div style={{ display: 'flex' }}>
       <MenuPost isOpen={isOpen} toggleMenu={toggleMenu} />
 
@@ -179,9 +183,10 @@ function PerfilAdmin() {
       </div>
 
     </div>
-
+</>
 
   );
+  
 }
 
 export default PerfilAdmin;

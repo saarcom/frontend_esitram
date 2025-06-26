@@ -1,0 +1,141 @@
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(to right, #f0edecd7, #c3c5c7);
+  color: white;
+ 
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 60px;
+  transition: margin-left 0.3s ease;
+
+
+  flex: 1;
+  padding: 2rem;
+ 
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin: 2rem;
+}
+
+.logo-button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-image: url('../../src/images/logo.png');
+  background-size: cover; /* Ajusta la imagen para cubrir todo el espacio */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que se repita */
+}
+
+.logo-img {
+  height: 36px;
+  margin-right: 0.5rem;
+  border-radius: 6px;
+}
+
+.logo-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+}
+
+
+.logout-btn {
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #2563eb;
+}
+
+
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    height: auto;
+    gap: 1rem;
+  }
+
+  .logo-text {
+    font-size: 1rem;
+  }
+
+  .nav-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .logout-btn {
+    flex: 1;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-header {
+    padding: 0.5rem;
+  }
+
+  .logo-img {
+    height: 28px;
+  }
+
+  .logo-text {
+    font-size: 0.9rem;
+  }
+
+  .logout-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}
+
+
+/*para el menu desplegable*/
+.user-dropdown {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+  z-index: 9999;
+}
+
+.user-dropdown button {
+  padding: 0.75rem 1rem;
+  background: none;
+  border: none;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 0.95rem;
+}
+
+.user-dropdown button:hover {
+  background-color: #f1f1f1;
+}
