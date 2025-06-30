@@ -22,14 +22,15 @@
 }
 
 .logo-button {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 2px solid white;
-  background-image: url('../../src/images/logo.png');
-  background-size: cover; /* Ajusta la imagen para cubrir todo el espacio */
-  background-position: center; /* Centra la imagen */
-  background-repeat: no-repeat; /* Evita que se repita */
+ position: absolute;
+  top: 20px;          /* Distancia desde arriba */
+  right: 20px;        /* Distancia desde la derecha */
+  width: 150px;       /* Ajusta según necesites */
+  height: 75px;       /* Ajusta según necesites */
+  border: none;
+  background: url('../../src/images/logo.png') center/contain no-repeat;
+  cursor: pointer;
+  z-index: 100;       /* Para que esté por encima de otros elementos */
 }
 
 .logo-img {

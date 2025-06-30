@@ -3,8 +3,8 @@ import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import Modal from 'react-modal';
 import './PerfilAdmin.css'; // Asegúrate de tener un archivo CSS para estilos
-import MenuPost from '../../components/menu/MenuPost';
-import Header  from '../../components/Header';
+//import MenuPost from '../../components/menu/MenuPost';
+///import Header  from '../../components/Header';
 
 
 Modal.setAppElement('#root'); // necesario para accesibilidad
@@ -17,8 +17,8 @@ function PerfilAdmin() {
   const { id } = useParams();
 
   // 
-  const [isOpen, setIsOpen] = useState(true);
-  const toggleMenu = () => setIsOpen(!isOpen);
+  //const [isOpen, setIsOpen] = useState(true);
+ // const toggleMenu = () => setIsOpen(!isOpen);
 
 
   useEffect(() => {
@@ -61,18 +61,11 @@ function PerfilAdmin() {
 
   return (
     <>
-    <Header isOpen={isOpen} /> {/* Agregado aquí */}
-
     
-    <div style={{ display: 'flex' }}>
-      <MenuPost isOpen={isOpen} toggleMenu={toggleMenu} />
+    
+  
 
-      <div className="admin-panel" style={{
-        marginLeft: isOpen ? '220px' : '60px', // ancho del menú abierto/cerrado
-        transition: 'margin-left 0.3s ease',
-        padding: '20px',
-        width: '100%',
-      }}>
+      <div className="admin-panel" >
         <header className="admin-header">
           <h2>Panel de Administración</h2>
         
@@ -182,7 +175,7 @@ function PerfilAdmin() {
         </footer>
       </div>
 
-    </div>
+   
 </>
 
   );
