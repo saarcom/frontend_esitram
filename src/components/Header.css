@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.8rem 1.5rem;
-  background: linear-gradient(to right, #f0edecd7, #c3c5c7);
+  background: linear-gradient(to right, #ffffffd7, #e7f1fc);
   color: white;
  
   position: sticky;
@@ -18,7 +18,8 @@
  
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  margin: 2rem;
+  margin: 0rem;
+  
 }
 
 .logo-button {
@@ -31,39 +32,6 @@
   background: url('../../src/images/logo.png') center/contain no-repeat;
   cursor: pointer;
   z-index: 100;       /* Para que esté por encima de otros elementos */
-}
-
-.logo-img {
-  height: 36px;
-  margin-right: 0.5rem;
-  border-radius: 6px;
-}
-
-.logo-text {
-  font-size: 1.2rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-}
-
-.nav-actions {
-  display: flex;
-  align-items: center;
-}
-
-
-.logout-btn {
-  background-color: #3b82f6;
-  border: none;
-  border-radius: 6px;
-  padding: 0.5rem 1rem;
-  color: white;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.logout-btn:hover {
-  background-color: #2563eb;
 }
 
 

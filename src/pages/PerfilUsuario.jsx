@@ -39,6 +39,10 @@ function PerfilUsuario() {
             className="perfil-content" >
             <section className="perfil-info">
                 <h2>Bienvenido: <span>{user.name}</span></h2>
+                <p><strong>Apellido Paterno :</strong> {user.lastnamep}</p>
+                <p><strong>Apellido materno :</strong> {user.lastnamem}</p>
+                 <p><strong>Fecha de cumpleaños :</strong> {user.birthdate}</p>
+
                 <p><strong>Correo :</strong> {user.email}</p>
                 <p><strong>Rol  :</strong> {user.role}</p>
             </section>

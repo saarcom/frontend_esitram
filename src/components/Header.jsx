@@ -32,11 +32,9 @@ function Header({ isOpen }) {
                 <button
                     className="logo-button"
                     onClick={() => setDropdownOpen(!dropdownOpen)}
-                 
-                >
-
+                >  
                 </button>
-
+                
                 {dropdownOpen && (
                     <div className="user-dropdown">
                         <button onClick={() => alert('Ver perfil')}>👤 Perfil</button>
