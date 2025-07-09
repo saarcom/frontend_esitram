@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.8rem 1.5rem;
-  background: linear-gradient(to right, #ffffffd7, #e7f1fc);
+  background: linear-gradient(to right, #fffdfd, #fffdfd);
   color: white;
  
   position: sticky;
@@ -11,11 +11,8 @@
   z-index: 1000;
   height: 60px;
   transition: margin-left 0.3s ease;
-
-
   flex: 1;
-  padding: 2rem;
- 
+  
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   margin: 0rem;
@@ -24,9 +21,9 @@
 
 .logo-button {
  position: absolute;
-  top: 20px;          /* Distancia desde arriba */
-  right: 20px;        /* Distancia desde la derecha */
-  width: 150px;       /* Ajusta según necesites */
+  top: 10px;          /* Distancia desde arriba */
+  right: 50px;        /* Distancia desde la derecha */
+  width: 130px;       /* Ajusta según necesites */
   height: 75px;       /* Ajusta según necesites */
   border: none;
   background: url('../../src/images/logo.png') center/contain no-repeat;

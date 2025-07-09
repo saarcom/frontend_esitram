@@ -18,7 +18,7 @@ function PerfilAdmin() {
 
   // 
   //const [isOpen, setIsOpen] = useState(true);
- // const toggleMenu = () => setIsOpen(!isOpen);
+  // const toggleMenu = () => setIsOpen(!isOpen);
 
 
   useEffect(() => {
@@ -61,14 +61,14 @@ function PerfilAdmin() {
 
   return (
     <>
-    
-    
-  
+
+
+
 
       <div className="admin-panel" >
         <header className="admin-header">
           <h2>Panel de Administración</h2>
-        
+
           <p>Bienvenido Admin: ID {id}</p>
           <button className="btn-primary" onClick={() => setModalIsOpen(true)}>+ Crear Usuario</button>
         </header>
@@ -79,6 +79,9 @@ function PerfilAdmin() {
               <tr>
                 <th>ID</th>
                 <th>Nombre</th>
+                <th>Ap. Paterno</th>
+                <th>Ap. Materno</th>
+                <th>Cumpleaños</th>
                 <th>Email</th>
                 <th>Rol</th>
                 <th>Acciones</th>
@@ -89,6 +92,9 @@ function PerfilAdmin() {
                 <tr key={u.id}>
                   <td>{u.id}</td>
                   <td>{u.name}</td>
+                  <td>{u.lastnamep}</td>
+                  <td>{u.lastnamem}</td>
+                  <td>{u.birthdate ? new Date(u.birthdate).toLocaleDateString() : 'N/A'}</td>
                   <td>{u.email}</td>
                   <td>{u.role}</td>
                   <td>
@@ -175,11 +181,11 @@ function PerfilAdmin() {
         </footer>
       </div>
 
-   
-</>
+
+    </>
 
   );
-  
+
 }
 
 export default PerfilAdmin;

@@ -4,6 +4,7 @@ body {
 
   background-size: 400% 400%;
   animation: gradient 10s ease infinite;
+   background-color: #f1f1f1 ; /*fondo de la pagina */
 }
 
 @keyframes gradient {

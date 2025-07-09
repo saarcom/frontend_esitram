@@ -38,7 +38,7 @@ function Header({ isOpen }) {
                 {dropdownOpen && (
                     <div className="user-dropdown">
                         <button onClick={() => alert('Ver perfil')}>👤 Perfil</button>
-                        <button onClick={() => alert('Configuración')}>⚙️ Configuración</button>
+                        <button onClick={() => alert('Configuración')}>⚙️  Configuración</button>
                         <button
                             onClick={() => {
                                 localStorage.removeItem('user');

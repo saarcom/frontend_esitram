@@ -58,8 +58,8 @@
   position: fixed;
   top: 10px;
   left: 15px;
-  background: #1e293b;
-  color: white;
+  background: #ffffff;
+  color: #00938b;
   border: none;
   padding: 10px;
   z-index: 1100;
@@ -84,3 +84,35 @@
   display: block;
   border: 1px solid #1e293b;
 }
+
+/* Contenedor del icono (necesario para posicionar el tooltip) */
+.icono-con-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Estilo del tooltip */
+.icono-con-tooltip .tooltip {
+  visibility: hidden;
+  width: 120px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: -85%; /* Posición arriba del icono */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 10px;
+}
+
+/* Mostrar tooltip al hacer hover */
+.icono-con-tooltip:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
