@@ -8,7 +8,7 @@ function BienvenidaUsuario() {
 
   useEffect(() => {
     // Suponiendo que el backend ya sabe quién está logueado (sesión/cookie/token)
-    axios.get('http://localhost:3000/api/auth/user', { withCredentials: true })
+    axios.get('http://localhost:3000/api/auth/users', { withCredentials: true })
       .then(res => setUser(res.data))
       .catch(() => alert('No estás autenticado'));
   }, []);

@@ -4,6 +4,7 @@ import './Menupost.css';
 import { FaBars } from 'react-icons/fa';
 import avatar from '../../images/avatar.png'; // Asegúrate de que la ruta sea correcta
 import { IoExitOutline } from "react-icons/io5";
+import logo from '../../images/logo.png';
 
 function MenuPost({ isOpen, toggleMenu }) {
   const navigate = useNavigate();
@@ -17,6 +18,9 @@ function MenuPost({ isOpen, toggleMenu }) {
 
       <aside className={`menu-post ${isOpen ? '' : 'closed'}`}>
         <div className="menu-content">
+          <div className='menu-logo'>
+            <img className="logo-image" src={logo} alt="logo eSitram" />
+          </div>
           <div className="menu-user">
 
             <img
@@ -27,14 +31,14 @@ function MenuPost({ isOpen, toggleMenu }) {
             <div className="icono-con-tooltip">
               <IoExitOutline
                 style={{ fontSize: "24px", color: "#555", cursor: "pointer" }}
-                 onClick={() => {
-                                localStorage.removeItem('user');
-                                window.location.href = '/login';
-                            }}
+                onClick={() => {
+                  localStorage.removeItem('user');
+                  window.location.href = '/login';
+                }}
               />
               <span className="tooltip">Cerrar sesión</span> {/* Mensaje emergente */}
             </div>
-
+            <h6>Actuante Sitram</h6>
             <h2>{user?.name}</h2>
             <h5>{user?.email}</h5>
 

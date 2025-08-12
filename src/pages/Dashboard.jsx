@@ -24,6 +24,8 @@ export default Dashboard;
 // pages/Dashboard.jsx
 //import React from 'react';
 
+
+/*
 import MenuPost from '../components/menu/MenuPost';
 
 
@@ -41,3 +43,5 @@ function Dashboard({ children }) {
 }
 
 export default Dashboard;
+
+*/

@@ -1,4 +1,5 @@
 // pages/Admin.jsx
+/*
 import { useUser } from '../hooks/useUser';
 
 function Admin() {
@@ -13,3 +14,4 @@ function Admin() {
 }
 
 export default Admin;
+*/

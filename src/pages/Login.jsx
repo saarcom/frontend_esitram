@@ -22,14 +22,18 @@ function Login() {
       const res = await axios.post('http://localhost:3000/api/users/login', form, {
         withCredentials: true
       });
-
+      
+      console.log('Usuario recibido:', res.data.user);
       localStorage.setItem('user', JSON.stringify(res.data.user));
-      const { role, id } = res.data.user;
+      localStorage.setItem('permisos', JSON.stringify(res.data.permisos));
+      const { role_id, id } = res.data.user;
 
-      if (role === 'admin') {
+      if (role_id === 1) {// 1 en caso que sea administrador 
+        console.log('adminnnnnnnnnnnnnn',res.data.permisos)
         navigate(`/PerfilAdmin/${id}`);
-      } else if (role === 'user') {
+      } else if (role_id === 2) { // 2 en caso que sea usuarioa 
         navigate(`/usuarios/${id}`);
+         console.log('usuarioooooooo',res.data.permisos)
       } else {
         setError('Rol desconocido');
       }

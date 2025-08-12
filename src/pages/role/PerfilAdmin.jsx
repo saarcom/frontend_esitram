@@ -70,7 +70,9 @@ function PerfilAdmin() {
           <h2>Panel de Administración</h2>
 
           <p>Bienvenido Admin: ID {id}</p>
-          <button className="btn-primary" onClick={() => setModalIsOpen(true)}>+ Crear Usuario</button>
+          
+
+          <button className="btn-primary" onClick={() => navigate('/crear-usuario')}>+ Crear Usuario</button>
         </header>
 
         <section className="admin-table">

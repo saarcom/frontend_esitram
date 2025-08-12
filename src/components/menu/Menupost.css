@@ -116,3 +116,18 @@
   opacity: 1;
 }
 
+/* Menupost.css */
+.menu-logo {
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee; /* opcional, para separar visualmente */
+  margin-bottom: 20px;
+}
+
+.logo-image {
+  max-width: 80%; /* Ajusta según necesites */
+  height: auto;
+  max-height: 80px; /* Controla el tamaño máximo */
+}
+
+/* Resto de tus estilos existentes... */
